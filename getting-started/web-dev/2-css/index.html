@@ -18,15 +18,18 @@
     .first-section {
       background: pink;
       width: 20%;
-      float: right;
+      position: relative;
+      left: 200px;
+      top: 100px;
+      z-index: 2;
+      opacity: 0.5;
     }
     .second-section {
       background: yellow;
       width: 50%;
-      float: left;
-    }
-    .clear-float {
-      clear: both;
+      position: relative;
+      top: 10px;
+      z-index: 1;
     }
   </style>
 </head>
