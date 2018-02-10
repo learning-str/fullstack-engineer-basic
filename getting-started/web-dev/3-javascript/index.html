@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+  <title>javascript</title>
+</head>
+<body>
+  <p id="text">Hello World</p>
+  <button id="myButton">Change Text</button>
+  <p id="secondParagraph">javascriptは、</p>
+  <button id="secondButton">Change Text</button>
+  <p id="thirdParagraph">style の変更</p>
+  <button id="thirdButton">Change style</button>
+  <p><a href="https://www.w3schools.com/jsref/dom_obj_style.asp/">w3schools.com</a></p>
+  <script type="text/javascript">
+    document.getElementById("myButton").onclick = () => {
+      document.getElementById("text").innerHTML = "clicked"
+    }
+
+    document.getElementById("secondButton").onclick = () => {
+      document.getElementById("secondParagraph").innerHTML +=
+        "サーバーサイドでも動作する。"
+    }
+
+    document.getElementById("thirdButton").onclick = () => {
+      console.log(this)
+      // document.getElementById("thirdParagraph").style.color = "red"
+      document.getElementById("thirdParagraph").style.display = "none"
+    }
+  </script>
+</body>
