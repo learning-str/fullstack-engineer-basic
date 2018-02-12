@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
   <title>jQuery</title>
+  <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
   <style>
     #circle1 {
       width: 150px;
@@ -28,11 +29,18 @@
       background-color: yellow;
       margin: 10px;
     }
+    #square3 {
+      width: 150px;
+      height: 150px;
+      background-color: pink;
+      margin: 10px;
+    }
   </style>
 </head>
 <body>
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
   <script src="jquery-3.3.1.min.js"></script>
+  <script src="jquery-ui/jquery-ui.js"></script>
 
   <div id="circle1"></div>
   <p id="sentence1">文章</p>
@@ -40,6 +48,21 @@
   <div id="square2"></div>
   <div id="circle2"></div>
   <p id="sentence2"></p>
+  <div id="square3">draggable</div>
+  <div id="accordion">
+    <h3>sec1</h3>
+    <div><p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p></div>
+    <h3>sec2</h3>
+    <div><p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p></div>
+    <h3>sec3</h3>
+    <div><p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p></div>
+  </div>
   <script type="text/javascript">
     $("#circle1").click(() => {
       $("#sentence1").html("circle clicked!")
@@ -74,5 +97,9 @@
     let string = "Rejex is great!"
     let result = string.match(regex)
     console.log(result)
+    $(function() {
+      $("#square3").draggable({ axis: "y" })
+    })
+    $("#accordion").accordion()
   </script>
 </body>
