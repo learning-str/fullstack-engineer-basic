@@ -39,6 +39,7 @@
   <div id="square1"></div>
   <div id="square2"></div>
   <div id="circle2"></div>
+  <p id="sentence2"></p>
   <script type="text/javascript">
     $("#circle1").click(() => {
       $("#sentence1").html("circle clicked!")
@@ -59,6 +60,15 @@
         $(this).css("background-color", "red")
       })
     })
-
+    // $.get("info.txt", d => {
+    //   console.log(d)
+    // })
+    $.ajax("info.txt").done(d => {
+      $("#sentence2").html(d)
+      console.log(d)
+    })
+    .fail(() => {
+      console.log("error")
+    })
   </script>
 </body>
