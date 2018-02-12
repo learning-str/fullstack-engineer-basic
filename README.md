@@ -20,3 +20,5 @@
 - [magnific popup](http://dimsemenov.com/plugins/magnific-popup/)
 - [unslider](https://idiot.github.io/unslider/)
 - [typeahead](https://twitter.github.io/typeahead.js/)
+- ajax
+  - 正規表現Rejex
