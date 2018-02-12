@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <head>
   <title>jQuery</title>
+  <style>
+    #circle1 {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: green;
+      margin: 10px;
+    }
+    #square1 {
+      width: 150px;
+      height: 150px;
+      background-color: red;
+      margin: 10px;
+    }
+  </style>
 </head>
 <body>
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
   <script src="jquery-3.3.1.min.js"></script>
 
+  <div id="circle1"></div>
+  <p id="sentence1">文章</p>
+  <div id="square1"></div>
   <script type="text/javascript">
-    console.log(typeof jQuery)
+    $("#circle1").click(() => {
+      $("#sentence1").html("circle clicked!")
+    })
+    $("#square1").hover(() => {
+      $("#square1").css("width","300px")
+    })
   </script>
 </body>
